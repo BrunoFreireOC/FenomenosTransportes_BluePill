@@ -1,5 +1,7 @@
 # FenomenosTransportes_BluePill
-Este repositório contém o código do microcontrolador STM32F103C8T6 (BluePill), em que o software computa o fluxo do sensor de fluxo YS- a partir da contagem do número de pulsos.
+Este repositório contém o código do microcontrolador STM32F103C8T6 (BluePill), em que o software computa o fluxo do sensor de fluxo YF-S201 a partir da contagem do número de pulsos.
+
+<img src="https://github.com/user-attachments/assets/44ecdc88-c015-49cb-9f5f-2974a8ad14cd" alt="BluePill Pinout" style="height: 311px; width: 333px;"/>
 
 O software configura uma interrupção no pino da BluePill, e armazena quantos pulsos está sendo contado. Também é configurado um Timer que tem uma rotina de interrupção a cada um segundo, em que na rotina de interrupção (ISR) é armazenado o valor do contador, e é feito a conversão de Número de Pulsos(N, adimensional) em Fluxo (F, L/min). É necessário saber o fator de correção do sensor, que pode variar entre sensores semelhantes, a fórmula prevista em que o Número de Pulsos é **atualizado a cada um segundo**.
 
